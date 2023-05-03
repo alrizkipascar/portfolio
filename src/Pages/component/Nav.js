@@ -12,6 +12,7 @@ const Nav = ({ scrollToPage }) => {
     // console.log(page);
     // console.log(id); py-3 -py-5
     scrollToPage(id);
+    setPage(null);
   };
   if (page != null) {
     scrollToPages(page);
