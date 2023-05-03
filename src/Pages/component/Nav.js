@@ -6,7 +6,7 @@ import { Home, Person, Construction, Work, Phone } from "@mui/icons-material";
 import { ConstructionIcon } from "@mui/icons-material";
 
 const Nav = ({ scrollToPage }) => {
-  const [page, setPage] = useState(null);
+  const [page, setPage] = useState("welcome");
 
   const scrollToPages = (id) => {
     // console.log(page);
