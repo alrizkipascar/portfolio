@@ -199,7 +199,7 @@ const Skills = ({ data, indexData, actionButton, activeIndex }) => {
   return (
     <div
       onClick={() => actionButton(indexData)}
-      className="border-t bg-zinc-800 hover:bg-red-400 hover:border-slate-600 transition-all ease-out duration-1000 w-84 xl:w-96 h-64  text-slate-50 bg-black "
+      className="border-t bg-zinc-800 hover:bg-red-400 hover:border-slate-600 transition-all ease-out duration-1000 w-76 xl:w-84 h-64  text-slate-50 bg-black "
     >
       {/* {children} */}
       <div

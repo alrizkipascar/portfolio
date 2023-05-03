@@ -67,7 +67,7 @@ const Experience = ({ experience }) => {
         {/* {currentSlide?.index == 0 || currentSlide?.index == 1 ? "About" : currentSlide?.index == 2 ? "Education" : "Certificate"} */}
       </div>
 
-      <div className="py-5 gap">
+      <div className="mx-auto  gap">
         <Accordions></Accordions>
         {/* {data.map((index, i) => {
           return (

@@ -128,7 +128,7 @@ const Accordion = ({ data, showModal, setShowModal }) => {
           for="panel-2"
           className="relative block bg-black text-white p-4 shadow border-b border-grey"
         >
-          PT Appinesstopia Global Karya
+          PT Raharja Jaya Bersama
         </label>
         <div
           className={`${CB2?.style} transition-all transform  duration-300 overflow-hidden bg-grey-lighter`}
@@ -138,7 +138,7 @@ const Accordion = ({ data, showModal, setShowModal }) => {
           <h2 className=" pt-4 pl-4">Fullstack Developer - 1 Year</h2>
           <p className=" px-4">
             I get the opportunity to be a Fullstack Developer especially in
-            website for PT Appinesstopia.
+            website for PT Raharja Jaya Bersama.
           </p>
           <ul class="mx-6 list-disc p-4">
             <li>Frontend React Js & React Native</li>

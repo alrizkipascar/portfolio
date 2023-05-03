@@ -53,8 +53,6 @@ const Skills = ({ skills }) => {
       newStyle = "opacity-0 translate-x-2/4 ";
 
       setBoxStyle(newStyle);
-      // setBoxStyle(newStyle);
-      // setBoxStyle(newStyle);
       setcurrentSlide({ index: newIndex });
     }, 600);
     setTimeout(() => {
@@ -71,7 +69,6 @@ const Skills = ({ skills }) => {
       newIndex = data - 1;
     }
 
-    // setcurrentSlide({ index: newIndex });
     newStyle = "opacity-0 translate-x-1/4 ";
     setBoxStyle(newStyle);
 
@@ -79,9 +76,6 @@ const Skills = ({ skills }) => {
       newStyle = "opacity-0 -translate-x-2/4 ";
 
       setBoxStyle(newStyle);
-
-      // setBoxStyle(newStyle);
-      // setBoxStyle(newStyle);
       setcurrentSlide({ index: newIndex });
     }, 600);
     setTimeout(() => {
@@ -91,7 +85,6 @@ const Skills = ({ skills }) => {
   };
 
   const actionButton = (index) => {
-    // data?.target?.checked
     let newIndex = null;
     let newStyle = null;
     if (currentSlide?.index == null) {
@@ -112,8 +105,6 @@ const Skills = ({ skills }) => {
         newStyle = "opacity-0 translate-x-2/4 ";
 
         setBoxStyle(newStyle);
-        // setBoxStyle(newStyle);
-        // setBoxStyle(newStyle);
         setcurrentSlide({ index: newIndex });
       }, 600);
       setTimeout(() => {
@@ -124,7 +115,6 @@ const Skills = ({ skills }) => {
     if (currentSlide?.index != null && currentSlide?.index > index) {
       newIndex = index;
 
-      // setcurrentSlide({ index: newIndex });
       newStyle = "opacity-0 translate-x-1/4 ";
       setBoxStyle(newStyle);
 
@@ -132,9 +122,6 @@ const Skills = ({ skills }) => {
         newStyle = "opacity-0 -translate-x-2/4 ";
 
         setBoxStyle(newStyle);
-
-        // setBoxStyle(newStyle);
-        // setBoxStyle(newStyle);
         setcurrentSlide({ index: newIndex });
       }, 600);
       setTimeout(() => {
@@ -142,14 +129,6 @@ const Skills = ({ skills }) => {
         setBoxStyle(newStyle);
       }, 800);
     }
-    // else {
-    //   newIndex = null;
-    //   newStyle = "hidden";
-    //   setcurrentSlide({ index: newIndex, style: newStyle });
-    // }
-
-    // setcurrentSlide({ index: newIndex, style: newStyle });
-    // console.log(currentSlide);
   };
   return (
     <div ref={skills} className="   bg-zinc-900 w-full h-screen text-white">
@@ -161,14 +140,14 @@ const Skills = ({ skills }) => {
         {CarouselData?.map((index, i) => {
           return (
             <>
-              <div className="grid">
+              <button className="grid">
                 <Cards.Skills
                   actionButton={actionButton}
                   activeIndex={currentSlide?.index}
                   data={index}
                   indexData={i}
                 ></Cards.Skills>
-              </div>
+              </button>
             </>
           );
         })}
