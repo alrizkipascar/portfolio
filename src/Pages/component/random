@@ -1,0 +1,194 @@
+import React, { useEffect, useRef, useState } from "react";
+import Animasection from "./animation";
+import styles from "./accordion.module.css";
+const Accordion = ({ data, showModal, setShowModal }) => {
+  const [currentSlide, setcurrentSlide] = useState({
+    index: 0,
+    style: "hidden",
+  });
+  const [CB1, setCB1] = useState({ style: "hidden" });
+  const [CB2, setCB2] = useState({
+    style:
+      "transition-all transform  duration-300 overflow-hidden bg-grey-lighter",
+  });
+  const [CB3, setCB3] = useState({
+    style:
+      "transition-all transform  duration-300 overflow-hidden bg-grey-lighter",
+  });
+  const checkbox = useRef();
+  const checkbox2 = useRef();
+  const checkbox3 = useRef();
+  // useEffect(() => {
+  //     return () => {
+  //       Animasection.observeAll();
+  //     };
+  //   }, []);
+  // console.log("cur",currentSlide.index)
+  // const nextSlide = () => {
+  //     let newSlide = currentSlide.index === data.length - 1 ? 0 : currentSlide.index + 1;
+  //     setcurrentSlide({index:newSlide, style:"translate-x-32"});
+  // }
+
+  // const prevSlide  = () => {
+  //     let newSlide = currentSlide.index === 0 ? data.length - 1 : currentSlide.index - 1;
+  //     setcurrentSlide({index:newSlide, style:"-translate-x-32"} );
+  // }
+  const actionAccordion = (data) => {
+    // data?.target?.checked
+    console.log("accordion", data, checkbox?.current?.id);
+    let newIndex = null;
+    let newStyle = "";
+    if (data?.info?.target?.checked == true) {
+      newIndex = data?.index;
+      newStyle = "";
+      if (data?.index == 1) {
+        setCB1({ style: newIndex });
+      }
+      if (data?.index == 2) {
+      }
+      if (data?.index == 3) {
+      }
+      setcurrentSlide({ index: newIndex, style: newStyle });
+    } else {
+      newIndex = 0;
+      newStyle = "opacity-0";
+      setcurrentSlide({ index: newIndex, style: newStyle });
+      newStyle = "hidden";
+      setTimeout(() => {
+        setcurrentSlide({ index: newIndex, style: newStyle });
+      }, 500);
+
+      if (data?.index == 1) {
+        newStyle = "opacity-0";
+        setCB1({ style: newIndex });
+        newStyle = "hidden";
+        setTimeout(() => {
+          setCB1({ style: newStyle });
+        }, 500);
+        console.log("timeout", currentSlide);
+      }
+      // if(data?.index == 2){
+
+      // }
+      // if(data?.index == 3){
+
+      // }
+    }
+  };
+  console.log("outside", currentSlide);
+  return (
+    <div className="accordion flex flex-col items-center justify-center h-screen">
+      <div className="w-1/2">
+        <input
+          onClick={(i) => actionAccordion({ info: i, index: 1 })}
+          type="checkbox"
+          name="panel"
+          id="panel-1"
+          className="hidden"
+        ></input>
+        <label
+          for="panel-1"
+          className="relative block bg-black text-white p-4 shadow border-b border-grey"
+        >
+          Panel 1
+        </label>
+        <div
+          className={`${CB1?.style} transition-all transform  duration-300 overflow-hidden bg-grey-lighter`}
+        >
+          <h2 className="accordion__header pt-4 pl-4">Header</h2>
+          <p className="accordion__body p-4" id="panel1">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto
+            possimus at a cum saepe molestias modi illo facere ducimus
+            voluptatibus praesentium deleniti fugiat ab error quia sit
+            perspiciatis velit necessitatibus.Lorem ipsum dolor sit amet,
+            consectetur adipisicing elit. Lorem ipsum dolor sit amet.
+          </p>
+        </div>
+      </div>
+      <div className="w-1/2">
+        <input
+          ref={checkbox2}
+          onClick={(i) => actionAccordion({ info: i, index: 2 })}
+          type="checkbox"
+          name="panel"
+          id="panel-2"
+          className="hidden"
+        ></input>
+        <label
+          for="panel-2"
+          className="relative block bg-black text-white p-4 shadow border-b border-grey"
+        >
+          Panel 2
+        </label>
+        <div
+          className={`${currentSlide?.index == 2 ? "opacity-1" : ""} ${
+            currentSlide?.index == 2 ? currentSlide?.style : ""
+          }  transition-all transform  duration-300 overflow-hidden bg-grey-lighter`}
+        >
+          {/* <div className={`transition overflow-hidden bg-grey-lighter`}> */}
+
+          <h2 className="accordion__header pt-4 pl-4">Header</h2>
+          <p className="accordion__body p-4">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto
+            possimus at a cum saepe molestias modi illo facere ducimus
+            voluptatibus praesentium deleniti fugiat ab error quia sit
+            perspiciatis velit necessitatibus.Lorem ipsum dolor sit amet,
+            consectetur adipisicing elit. Lorem ipsum dolor sit amet.
+          </p>
+        </div>
+      </div>
+      <div className="w-1/2">
+        <input
+          style={styles.input}
+          type="checkbox"
+          name="panel"
+          id="panel-3"
+          className="hidden"
+        ></input>
+        <label
+          style={styles.label}
+          for="panel-3"
+          className="relative block bg-black text-white p-4 shadow border-b border-grey"
+        >
+          Panel 3
+        </label>
+        <div className="accordion__content overflow-hidden bg-grey-lighter">
+          <h2 className="accordion__header pt-4 pl-4">Header</h2>
+          <p className="accordion__body p-4">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto
+            possimus at a cum saepe molestias modi illo facere ducimus
+            voluptatibus praesentium deleniti fugiat ab error quia sit
+            perspiciatis velit necessitatibus.Lorem ipsum dolor sit amet,
+            consectetur adipisicing elit. Lorem ipsum dolor sit amet.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Accordion;
+
+<div class="relative group w-96 h-96 overflow-hidden bg-black m-auto mt-36">
+  <img
+    class="object-cover w-full h-full transform duration-700 backdrop-opacity-100"
+    src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1650&q=80"
+  />
+  <div class="absolute w-full h-full shadow-2xl opacity-20 transform duration-500 inset-y-full group-hover:-inset-y-0"></div>
+  <div class="absolute bg-gradient-to-t from-black w-full h-full transform duration-500 inset-y-full group-hover:-inset-y-0">
+    <div class="absolute w-full flex place-content-center">
+      <p class="capitalize font-serif font-bold text-3xl text-center shadow-2xl text-white mt-10">
+        Team work
+      </p>
+    </div>
+    <div class="absolute w-full flex place-content-center mt-20">
+      <p class="font-sans text-center w-4/5 text-white mt-5">
+        Collaborative effort of a group to achieve a common goal the most
+        effective and efficient way!
+      </p>
+    </div>
+    <button class="absolute left-1/4 bottom-4 bg-white text-black font-bold rounded-lg h-10 w-48">
+      Contact Us
+    </button>
+  </div>
+</div>;

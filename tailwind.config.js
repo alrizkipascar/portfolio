@@ -6,6 +6,7 @@ module.exports = {
         fadeIn: "fadeIn 2s ease-in forwards",
       }, backgroundImage: {
         'orange': "url('Image/orange.jpg')",
+        'doodle': "url('Image/bg-doodle.png')",
       },
       keyframes: {
         fadeIn: {

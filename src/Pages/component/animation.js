@@ -7,7 +7,7 @@ class Animasection {
       this,
       {
         root: null, // relative to document viewport
-        rootMargin: "10px", // margin around root. Values are similar to css property. Unitless values not allowed
+        rootMargin: "50px", // margin around root. Values are similar to css property. Unitless values not allowed
         threshold: 0.5, // visible amount of item shown in relation to root (higher values can cause problems)
       },
       options

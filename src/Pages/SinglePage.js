@@ -5,9 +5,8 @@ import Experience from "./Experience";
 import Skills from "./Skills";
 import Welcome from "./Welcome";
 import About from "./About";
-import Animasection from "./component/animation";
 
-function SinglePage() {
+function SinglePage({ Animasection }) {
   const welcome = useRef(null);
   const about = useRef(null);
   const experience = useRef(null);
@@ -44,19 +43,19 @@ function SinglePage() {
       <header className="sticky top-0 z-50 flex justify-center">
         <Nav scrollToPage={scrollToPage} />
         {/* <button className="w-16 h-8 rounded-full text-white  justify-center"> tes</button> */}
-
       </header>
 
       <div className="z-0 overflow-y-hidden sm:h-auto">
         {/* <div className="border"> */}{" "}
         <Welcome
           welcome={welcome}
+          Animasection={Animasection}
           id="welcome"
           name="welcome"
           // ref={welcome}
         ></Welcome>
         {/* </div> */}
-        <About about={about}></About>
+        <About Animasection={Animasection} about={about}></About>
         <Experience id="experience" experience={experience}></Experience>
         <Skills skills={skills}></Skills>
         <Contact contact={contact}></Contact>

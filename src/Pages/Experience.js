@@ -60,13 +60,13 @@ const Experience = ({ experience }) => {
   return (
     <div
       ref={experience}
-      className="w-full h-screen text-white bg-zinc-900 px-6 py-20"
-    > 
-    <div className="text-2xl font-sans text-zinc-500 mx-auto w-32 h-auto border-t-4  my-8 text-center">
-    Experience
-    {/* {currentSlide?.index == 0 || currentSlide?.index == 1 ? "About" : currentSlide?.index == 2 ? "Education" : "Certificate"} */}
-    </div>
-    
+      className="w-full h-full text-white bg-zinc-900 px-6 py-20"
+    >
+      <div className="text-2xl font-sans text-zinc-500 mx-auto w-32 h-auto border-t-4  my-8 text-center">
+        Experience
+        {/* {currentSlide?.index == 0 || currentSlide?.index == 1 ? "About" : currentSlide?.index == 2 ? "Education" : "Certificate"} */}
+      </div>
+
       <div className="py-5 gap">
         <Accordions></Accordions>
         {/* {data.map((index, i) => {

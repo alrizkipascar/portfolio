@@ -1,8 +1,8 @@
 import Cards from "./component/Cards";
-import image from "../Image/orange.jpg"
+import image from "../Image/orange.jpg";
 import CarouselText from "./component/carousel-text";
 // import image from "../Image/background.jpg";
-const Welcome = ({ welcome }) => {
+const Welcome = ({ welcome, Animasection }) => {
   // console.log("test", document.querySelectorAll("[data-replace]"));
   // document.addEventListener("DOMContentLoaded", function () {
   // setTimeout(function () {
@@ -18,21 +18,19 @@ const Welcome = ({ welcome }) => {
   //     });
   //   }
   // }, 200);
-  // }); bg-gradient-to-b from-blue-900 to-blue-600 
+  // }); bg-gradient-to-b from-blue-900 to-blue-600
   const CarouselData = [
     {
-      text:"Web & Mobile Development (React)",
+      text: "Web & Mobile Development (React)",
     },
     {
-      text:"Back end development",
+      text: "Back end development",
     },
     {
-      text:
-        "Data Science",
+      text: "Data Science",
     },
     {
-      text:
-        "Machine Learning",
+      text: "Machine Learning",
     },
   ];
   return (
@@ -40,17 +38,13 @@ const Welcome = ({ welcome }) => {
       ref={welcome}
       className="w-full bg-zinc-900 border-b border-slate-700 text-white items-center justify-center flex h-screen "
     >
-      
       <div
         data-class-in="translate-y-0 opacity-1"
         data-class-out="translate-y-32 opacity-0"
         className="translate-y-32 opacity-0 w-full transition transform duration-500   text-base font-light text-center font-sans leading-relaxed mt-0 mb-4"
       >
-        <CarouselText data={CarouselData} />
-       
-        
+        <CarouselText Animasection={Animasection} data={CarouselData} />
       </div>
-      
     </div>
   );
 };
