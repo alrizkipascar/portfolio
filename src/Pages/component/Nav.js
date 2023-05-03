@@ -6,17 +6,17 @@ import { Home, Person, Construction, Work, Phone } from "@mui/icons-material";
 import { ConstructionIcon } from "@mui/icons-material";
 
 const Nav = ({ scrollToPage }) => {
-  const [page, setPage] = useState("welcome");
+  // const [page, setPage] = useState("welcome");
 
   const scrollToPages = (id) => {
     // console.log(page);
     // console.log(id); py-3 -py-5
     scrollToPage(id);
-    setPage(null);
+    // setPage(null);
   };
-  if (page != null) {
-    scrollToPages(page);
-  }
+  // if (page != null) {
+  //   // scrollToPages(page);
+  // }
   return (
     <div className=" w-full h-12 hover:bg-slate-800  text-white flex bg-gray-900">
       <button style={{}} className=" bg-gray-900 w-7/12 hover:bg-slate-700">
@@ -30,7 +30,7 @@ const Nav = ({ scrollToPage }) => {
         className=" bg-gray-900 w-1/12 hover:bg-slate-700"
         //  className=" w-14 rounded-full h-14 hover:bg-slate-700 bg-gray-900"
         id={"home"}
-        onClick={() => setPage("welcome")}
+        onClick={() => scrollToPages("welcome")}
       >
         <div className="">
           {/* <Home /> */}
@@ -40,7 +40,7 @@ const Nav = ({ scrollToPage }) => {
       <button
         className="w-1/12   hover:bg-slate-700 bg-gray-900"
         id={"about"}
-        onClick={() => setPage("about")}
+        onClick={() => scrollToPages("about")}
       >
         <div className="grid justify-items-center ">
           {/* <Person /> */}
@@ -50,7 +50,7 @@ const Nav = ({ scrollToPage }) => {
       <button
         className="w-1/12 hover:bg-slate-700 bg-gray-900"
         id={"experience"}
-        onClick={() => setPage("experience")}
+        onClick={() => scrollToPages("experience")}
       >
         <div className="grid justify-items-center ">
           {/* <Work /> */}
@@ -60,7 +60,7 @@ const Nav = ({ scrollToPage }) => {
       <button
         className="w-1/12 hover:bg-slate-700 bg-gray-900"
         id={"skills"}
-        onClick={() => setPage("skills")}
+        onClick={() => scrollToPages("skills")}
       >
         <div className="grid justify-items-center ">
           {/* <Construction /> */}
@@ -70,7 +70,7 @@ const Nav = ({ scrollToPage }) => {
       <button
         className="w-1/12 hover:bg-slate-700 bg-gray-900"
         id={"contact"}
-        onClick={() => setPage("contact")}
+        onClick={() => scrollToPages("contact")}
       >
         <div className="grid justify-items-center ">
           {/* <Phone /> */}
