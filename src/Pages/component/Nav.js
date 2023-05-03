@@ -17,23 +17,16 @@ const Nav = ({ scrollToPage }) => {
     scrollToPages(page);
   }
   return (
-    <div 
-   
-    className=" w-full h-12 hover:bg-slate-800  text-white flex bg-gray-900">
-       <button
-        style={{
-     }} 
-    className=" bg-gray-900 w-7/12 hover:bg-slate-700"
-      >
+    <div className=" w-full h-12 hover:bg-slate-800  text-white flex bg-gray-900">
+      <button style={{}} className=" bg-gray-900 w-7/12 hover:bg-slate-700">
         <div className="">
           {/* <Home /> */}
           Alrizki Pasca Ramadhani
         </div>
       </button>
       <button
-        style={{
-     }} 
-    className=" bg-gray-900 w-1/12 hover:bg-slate-700"
+        style={{}}
+        className=" bg-gray-900 w-1/12 hover:bg-slate-700"
         //  className=" w-14 rounded-full h-14 hover:bg-slate-700 bg-gray-900"
         id={"home"}
         onClick={() => setPage("welcome")}
