@@ -31,7 +31,7 @@ function SinglePage({ Animasection }) {
       if (arrayPage[i][id]) {
         Animasection.observeAll();
 
-        console.log("test", arrayPage[i][id]);
+        // console.log("test", arrayPage[i][id]);
 
         arrayPage[i][id].current?.scrollIntoView({ behavior: "smooth" });
       }

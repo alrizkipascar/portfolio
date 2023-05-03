@@ -12,32 +12,11 @@ const About = ({ about, Animasection }) => {
       Animasection.observeAll();
     };
   }, []);
-  // console.log("cur",currentSlide.index)
-  // const nextSlide = () => {
-  //     let newSlide = currentSlide.index === data.length - 1 ? 0 : currentSlide.index + 1;
-  //     setcurrentSlide({index:newSlide, style:"translate-x-32"});
-  // }
 
-  // const prevSlide  = () => {
-  //     let newSlide = currentSlide.index === 0 ? data.length - 1 : currentSlide.index - 1;
-  //     setcurrentSlide({index:newSlide, style:"-translate-x-32"} );
-  // }
   const actionButton = (data) => {
-    // data?.target?.checked
-    console.log("accordion", data);
     let newIndex = data?.index;
     let newStyle = "translate-x-0 opacity-1";
-    // if(data?.info?.target?.checked == true){
-    // newIndex = data?.index
-    // newStyle = ""
-    // }
-    // else{
-    // newIndex = 0
-    // newStyle = "-translate-x-32"
-    // }
-
     setcurrentSlide({ index: newIndex, style: newStyle });
-    console.log(currentSlide);
   };
 
   return (

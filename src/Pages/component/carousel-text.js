@@ -10,7 +10,7 @@ const CarouselText = ({ data, Animasection }) => {
       Animasection.observeAll();
     };
   }, []);
-  console.log("cur", currentSlide.index);
+
   const nextSlide = () => {
     let newSlide =
       currentSlide.index === data.length - 1 ? 0 : currentSlide.index + 1;

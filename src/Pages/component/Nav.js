@@ -14,12 +14,15 @@ const Nav = ({ scrollToPage }) => {
     scrollToPage(id);
     // setPage(null);
   };
+  setTimeout(() => {
+    if (page !== 2) {
+      let x = page + 1;
+      scrollToPages("welcome");
+      setPage(x);
+      //
+    }
+  }, 1000);
 
-  if (page != 2) {
-    scrollToPages("welcome");
-    setPage(page + 1);
-    //
-  }
   return (
     <div className=" w-full h-12 hover:bg-slate-800  text-white flex bg-gray-900">
       <button style={{}} className=" bg-gray-900 w-7/12">

@@ -29,7 +29,7 @@ const Accordion = ({ data, showModal, setShowModal }) => {
   // }
   const actionAccordion = (data) => {
     // data?.target?.checked
-    console.log("accordion", data, checkbox?.current?.id);
+
     let newIndex = null;
     let newStyle = "";
     if (data?.info?.target?.checked == true) {
@@ -61,7 +61,6 @@ const Accordion = ({ data, showModal, setShowModal }) => {
         setTimeout(() => {
           setCB1({ style: newStyle });
         }, 500);
-        console.log("timeout", currentSlide);
       }
       if (data?.index == 2) {
         newStyle = "opacity-0";
@@ -70,7 +69,6 @@ const Accordion = ({ data, showModal, setShowModal }) => {
         setTimeout(() => {
           setCB2({ style: newStyle });
         }, 500);
-        console.log("timeout", currentSlide);
       }
       if (data?.index == 3) {
         newStyle = "opacity-0";
@@ -79,11 +77,9 @@ const Accordion = ({ data, showModal, setShowModal }) => {
         setTimeout(() => {
           setCB3({ style: newStyle });
         }, 500);
-        console.log("timeout", currentSlide);
       }
     }
   };
-  console.log("outside", currentSlide);
   return (
     <div className="accordion flex flex-col items-center justify-center h-auto">
       <div className="w-1/2">
