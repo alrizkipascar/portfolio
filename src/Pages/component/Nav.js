@@ -6,7 +6,7 @@ import { Home, Person, Construction, Work, Phone } from "@mui/icons-material";
 import { ConstructionIcon } from "@mui/icons-material";
 
 const Nav = ({ scrollToPage }) => {
-  // const [page, setPage] = useState("welcome");
+  const [page, setPage] = useState(0);
 
   const scrollToPages = (id) => {
     // console.log(page);
@@ -14,12 +14,15 @@ const Nav = ({ scrollToPage }) => {
     scrollToPage(id);
     // setPage(null);
   };
-  // if (page != null) {
-  //   // scrollToPages(page);
-  // }
+
+  if (page != 2) {
+    scrollToPages("welcome");
+    setPage(page + 1);
+    //
+  }
   return (
     <div className=" w-full h-12 hover:bg-slate-800  text-white flex bg-gray-900">
-      <button style={{}} className=" bg-gray-900 w-7/12 hover:bg-slate-700">
+      <button style={{}} className=" bg-gray-900 w-7/12">
         <div className="">
           {/* <Home /> */}
           Alrizki Pasca Ramadhani
