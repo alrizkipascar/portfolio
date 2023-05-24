@@ -39,7 +39,7 @@ function SinglePage({ Animasection }) {
   };
 
   return (
-    <div className=" sm:h-screen  bg-black">
+    <div className=" sm:h-auto  bg-black">
       <header className="sticky top-0 z-50 flex justify-center">
         <Nav scrollToPage={scrollToPage} />
         {/* <button className="w-16 h-8 rounded-full text-white  justify-center"> tes</button> */}
