@@ -131,7 +131,7 @@ const Skills = ({ skills }) => {
     }
   };
   return (
-    <div ref={skills} className="   bg-zinc-900 w-full h-screen text-white">
+    <div ref={skills} className="   bg-zinc-900 w-full sm:h-auto text-white">
       <div className="text-2xl font-sans text-zinc-500 mx-auto w-32 h-auto border-t-4 text-center">
         Focus
         {/* {currentSlide?.index == 0 || currentSlide?.index == 1 ? "About" : currentSlide?.index == 2 ? "Education" : "Certificate"} */}

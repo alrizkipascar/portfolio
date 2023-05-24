@@ -60,7 +60,7 @@ const Experience = ({ experience }) => {
   return (
     <div
       ref={experience}
-      className="w-full h-full text-white bg-zinc-900 px-6 py-20"
+      className="w-full sm:h-auto text-white bg-zinc-900 px-6 py-20"
     >
       <div className="text-2xl font-sans text-zinc-500 mx-auto w-32 h-auto border-t-4  my-8 text-center">
         Experience

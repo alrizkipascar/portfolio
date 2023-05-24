@@ -15,7 +15,7 @@ const Contact = ({ contact }) => {
   return (
     <div
       ref={contact}
-      className=" items-center justify-center bg-zinc-900 w-full h-screen
+      className=" items-center justify-center bg-zinc-900 w-full sm:h-auto
        text-white px-16 py-20"
     >
       {/* <div className="grid grid-cols-2 w-full py-5 border-slate-800 rounded-lg gap-5"> */}
