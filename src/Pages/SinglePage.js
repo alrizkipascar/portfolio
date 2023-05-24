@@ -39,13 +39,13 @@ function SinglePage({ Animasection }) {
   };
 
   return (
-    <div className=" sm:h-auto  bg-black">
+    <div className=" sm:h-auto  bg-zinc-900">
       <header className="sticky top-0 z-50 flex justify-center">
         <Nav scrollToPage={scrollToPage} />
         {/* <button className="w-16 h-8 rounded-full text-white  justify-center"> tes</button> */}
       </header>
 
-      <div className="z-0 overflow-y-hidden sm:h-auto">
+      <div className="z-0 bg-zinc-900 sm:h-auto">
         {/* <div className="border"> */}{" "}
         <Welcome
           welcome={welcome}
