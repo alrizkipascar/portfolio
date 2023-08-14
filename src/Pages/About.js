@@ -27,7 +27,7 @@ const About = ({ about, Animasection }) => {
             ? "About"
             : currentSlide?.index == 2
             ? "Education"
-            : "Non Formal Education"}
+            : "Certification"}
         </div>
 
         <div
@@ -74,8 +74,23 @@ const About = ({ about, Animasection }) => {
             currentSlide?.index == 3 ? "" : "hidden"
           } translate-y-32 opacity-0 transition transform  duration-700 ease-in-out w-full font-sans text-white border-y rounded-lg border-zinc-800`}
         >
-          <div className="">
-            <h1 className="text-lg text-center">Coursera</h1>
+          <div className="my-5">
+            <h1 className="text-lg text-center"></h1>
+            <ul class="mx-6 list-decimal">
+              <li>
+                <a
+                  href="https://learn.microsoft.com/en-us/users/AlrizkiPasca-9063/credentials/63C668EF75A94B45"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="duration-500 hover:bg-red-500  bg-zinc-800 "
+                >
+                  DP-900 Microsoft Azure Data Fundamental
+                </a>
+              </li>
+            </ul>
+          </div>
+          {/* <div className="my-5">
+            <h1 className="text-lg text-center">Certificate of Completion</h1>
             <ul class="mx-6 list-decimal">
               <li>
                 <a
@@ -138,7 +153,7 @@ const About = ({ about, Animasection }) => {
                 </a>
               </li>
             </ul>
-          </div>
+          </div> */}
         </div>
       </div>
 

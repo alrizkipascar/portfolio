@@ -128,7 +128,7 @@ const Accordion = ({ data, showModal, setShowModal }) => {
           for="panel-2"
           className="relative block bg-black text-white p-4 shadow border-b border-grey"
         >
-          PT Raharja Jaya Bersama
+          PT Appinesstopia Global Karya
         </label>
         <div
           className={`${CB2?.style} transition-all transform  duration-300 overflow-hidden bg-grey-lighter`}
@@ -162,34 +162,25 @@ const Accordion = ({ data, showModal, setShowModal }) => {
           for="panel-3"
           className="relative block bg-black text-white p-4 shadow border-b border-grey"
         >
-          Free Lance
+          Unify AI
         </label>
         <div
           className={`${CB3?.style} transition-all transform  duration-500 overflow-hidden bg-grey-lighter`}
         >
-          <h2 className=" pt-4 pl-4">Free Lance</h2>
+          <h2 className=" pt-4 pl-4">Open Source Contributor</h2>
           <p className=" px-4">
             <ul class="mx-6 list-disc p-4">
-              <li>Create company profile for company</li>
-              {/* <li>Back End with Laravel create API and database</li>
-            <li>Back End with Firebase create API</li>
-            <li>Bug Fixing.</li>
-            <li>Handling client</li> */}
+              <li>
+                Read every documentation for every framework to match up with
+                the function, available framework to implement in ivy framework
+                is Tensorflow, Paddle, Torch, Jax, Numpy.
+              </li>
+              <li>Implement the code based the documentation.</li>
+              <li>Create test code</li>
             </ul>
           </p>
         </div>
       </div>
-
-      {/* <div className="w-1/2">
-    <input onClick={(i) => actionAccordion({info:i,index:4})} type="checkbox" name="panel" id="panel-4" className="hidden"></input>
-    <label for="panel-4" className="relative block bg-black text-white p-4 shadow border-b border-grey">Panel 4</label>
-    <div className={`transition-all transform  duration-300 overflow-hidden bg-grey-lighter`}>
-      
-        <h2 className=" pt-4 pl-4">Header</h2>
-        <p className=" p-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto possimus at a cum saepe molestias modi illo facere ducimus voluptatibus praesentium deleniti fugiat ab error quia sit perspiciatis velit necessitatibus.Lorem ipsum dolor sit amet, consectetur
-          adipisicing elit. Lorem ipsum dolor sit amet.</p>
-      </div>
-    </div> */}
     </div>
   );
 };
